@@ -88,21 +88,13 @@ public class Homework {
         System.out.println("Задача 6");
         int[][] square = new int[3][3];
         for (i = 0; i < square.length; i++){
-        if (i==0) {
-            square[i][0] =1;
-            square[i][square.length-1] =1;
-        }
-        else if (i==1){
-            square[i][1] =1;
+            for (n = 0; n < square.length; n++) {
+                if (n == i) {
+                    square[i][n] = 1;
+                    square[i][square.length-n-1] =1;
+                }
             }
-        else if (i==2){
-            square[i][0]= 1;
-            square[i][square.length-1]=1;
-            }
+            System.out.println(Arrays.toString(square[i]));
         }
-        System.out.println(Arrays.toString(square[0]));
-        System.out.println(Arrays.toString(square[1]));
-        System.out.println(Arrays.toString(square[2]));
     }
-
 }
